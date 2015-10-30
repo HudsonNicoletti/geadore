@@ -1,0 +1,65 @@
+section.lines
+    
+    .container
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+        
+        .product-line
+            width: 33.3%
+            
+            figure
+                width: 100%
+                
+                img
+                    width: 100%
+            
+            h3
+                font:
+                    size: 80px
+                    family: Savoye
+                    
+            p
+                font:
+                    size: 12px
+                    weight: bold
+                color: lighten( $_black , 30% )
+                
+            a
+                display: inline-block
+                padding: 10px 35px
+                font: 
+                    size: 18px
+                color: $_white
+                background-color: $_primary
+
+                &:hover
+                    background-color: lighten( $_primary , 10% )
+                
+            @media( max-width: 640px )
+                width: 100%
+
+        @media( max-width: 640px )
+            flex-direction: column
+            
+            
+    .container:nth-child(2)
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 20px 0
+        
+        a.more
+            display: inline-block
+            padding: 10px 35px
+            font: 
+                size: 18px
+            color: $_primary
+            background-color: transparent
+            border: 2px solid $_primary
+
+            &:hover
+                background-color: $_primary
+                border: 2px solid $_white
+                color: $_white

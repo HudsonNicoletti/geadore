@@ -1,0 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,300,700)
+@import url(http://fonts.googleapis.com/css?family=Satisfy)
+
+@import 'bootstrap'
+@import 'font_awesome'
+@import 'variables'
+@import 'animate'
+@import 'logo'
+@import 'header'
+@import 'slider'
+@import 'section'
+@import 'section.about'
+@import 'section.lines'
+@import 'section.local'
+@import 'footer'
+@import 'owl.carousel'
+@import 'owl.theme'
+@import 'owl.transitions'
+
+@viewport
+    zoom: 1.0
+    width: device-width
+
+@font-face 
+    font-family: 'Rockwell'
+    src: url('../fonts/rockwell.ttf')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: 'Savoye'
+    src: url('../fonts/savoyeplain.ttf')
+    font-weight: normal
+    font-style: normal
+
+body,html
+    font-family: Raleway
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+    
+a , a:active , a:hover , a:link , a:visited
+    text-decoration: none
+
+.scroll-top
+    position: fixed
+    right: 10px
+    bottom: 10px
+    width: 48px
+    height: 48px
+    background-color: $_primary
+    text-align: center
+    display: flex
+    justify-content: center
+    align-content: center
+    border-radius: 50%
+    transition: all 0.4s ease-in-out
+    opacity: 0
+    box-shadow: 0px 2px 3px $_black
+    
+    a
+        display: block
+        text-decoration: none
+        color: $_white
+        font-size: 30px
+        cursor: pointer
+        
+    &:hover
+        background-color: lighten( $_primary, 10%)
+        
+        a
+            color: $_white

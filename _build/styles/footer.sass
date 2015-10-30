@@ -1,0 +1,58 @@
+footer
+    
+    .container
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: row
+        
+        .copyright
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            text-align: center
+            width: 33.3%
+            
+            span
+                color: $_primary
+                
+            a
+                padding: 15px 0
+            
+        .contact
+            text-align: center
+            width: 33.3%
+            
+            p
+                color: $_primary
+                
+            span
+                color: $_primary
+                display: inline-block
+            
+        .social
+            width: 33.3%          
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: row
+            
+            .icon
+                width: 50px
+                height: 50px
+                border-radius: 50%
+                background-color: $_primary
+                margin: 0 4px
+                text-align: center
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+                
+                a
+                    color: $_white
+                    
+                &:hover
+                    background-color: lighten( $_primary , 10% )
+                

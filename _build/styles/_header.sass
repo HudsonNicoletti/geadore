@@ -1,0 +1,66 @@
+header
+    width: 100%
+    border-top: 1px solid rgba( $_primary , 0.50)
+    border-bottom: 1px solid rgba( $_primary , 0.50)
+    background-color: #FFF
+    transition: all 0.3s ease-in-out
+    z-index: 10
+    
+    nav
+        .menu-logo
+            display: none
+            float: left
+            padding: 10px
+            width: 100px
+            height: 100px
+            background:
+                image: url('../images/logo/mobile.png')
+                color: #FFF
+                repeat: no-repeat
+                size: contain
+                position: center center
+            
+        .menu-toggle
+            font-size: 60px
+            display: none
+            float: right
+            padding: 10px
+            cursor: pointer
+            
+        ul
+            list-style: none
+            padding: 10px 0
+            margin: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: row
+            
+            li
+                padding: 10px 10px
+                margin: 0 6px
+                font:
+                    size: 18px
+                
+                a
+                    padding: 6px 6px
+                    color: $_black
+
+                &.active, &:hover
+                    background-color: $_primary
+                    color: $_white
+                    border-radius: 6px
+
+                    a
+                        color: $_white
+                        
+        @media( max-width: 640px )
+            .menu-logo
+                display: inline-block
+                
+            .menu-toggle
+                display: inline-block
+
+            ul
+                display: none
+                flex-direction: column
