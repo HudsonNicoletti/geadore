@@ -33,9 +33,13 @@ section.lines
                     size: 18px
                 color: $_white
                 background-color: $_primary
+                text-align: center
 
                 &:hover
                     background-color: lighten( $_primary , 10% )
+                
+                @media( max-width: 640px )
+                    width: 100%
                 
             @media( max-width: 640px )
                 width: 100%

@@ -1,0 +1,111 @@
+include mixins
+
+doctype html
+html
+    head
+    
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="Painel Administrativo")
+        meta(name="author" content="Hudson Nicoletti")
+    
+        title  Ge' Adore
+        
+        link(rel="stylesheet", href="assets/styles/main.css")
+        link(rel="shortcut icon" href="/favicon.ico")
+    body.home           
+    
+        .logo
+                
+        .slides
+             ul.slides-container
+                 +slideritem("background-image: url('./assets/images/slider/01.jpg')")
+                 +slideritem("background-image: url('./assets/images/slider/02.jpg')")
+                 
+        header
+            nav
+                .menu-logo
+                .menu-toggle
+                    i.fa.fa-bars
+                ul
+                    li: a(href="/") Home
+                    li.active: a(href="/empresa.html") Empresa
+                    li: a(href="#") Masculino
+                    li: a(href="#") Feminino
+                    li: a(href="#") Cosmédicos
+                    li: a(href="#") Contato
+                
+        section.business
+            .container
+                .column
+                    h3.title Sobre Nós
+                    figure
+                        img(src="//placehold.it/370x200", alt="")
+                    h4.subtitle  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, nam?
+                    p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae optio, magnam, aliquam fuga, aut placeat nemo architecto quaerat autem reiciendis minus repudiandae delectus! Error distinctio delectus, non, voluptate, similique beatae itaque rerum sed sint aspernatur soluta fugit deleniti, perferendis hic fugiat et at eaque optio! Nobis quia numquam, velit ea soluta itaque. Voluptatum veritatis voluptatibus, ea sequi magnam odio, molestiae!
+                .column
+                    h3.title Porque
+                        small escolher Adore?
+                    ul.list
+                        li
+                            .contents
+                                .title 
+                                    span 01.  
+                                    strong Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quibusdam odit molestiae, sequi explicabo consequuntur, voluptatibus iusto nulla porro minus alias? Odio dolore hic, tempora iste nulla illum recusandae, laudantium?
+                            .contents
+                                .title 
+                                    span 02.  
+                                    strong Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quibusdam odit molestiae, sequi explicabo consequuntur, voluptatibus iusto nulla porro minus alias? Odio dolore hic, tempora iste nulla illum recusandae, laudantium?
+                            .contents
+                                .title 
+                                    span 03.  
+                                    strong Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quibusdam odit molestiae, sequi explicabo consequuntur, voluptatibus iusto nulla porro minus alias? Odio dolore hic, tempora iste nulla illum recusandae, laudantium?
+                .column
+                    .block
+                        h3.title Missão
+                        p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dolor, blanditiis. Labore officia quasi necessitatibus recusandae nobis. Quidem distinctio aut qui ipsum. Laboriosam unde dolorem molestiae rem fugiat quaerat quae corrupti quibusdam quisquam aspernatur praesentium autem ea, commodi adipisci modi odio corporis, et provident itaque est repudiandae, officiis. Iusto ut, illum voluptatem repudiandae commodi magni dolorem? Beatae harum, sequi aliquid.
+                    .block
+                        h3.title Visão
+                        p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dolor, blanditiis. Labore officia quasi necessitatibus recusandae nobis. Quidem distinctio aut qui ipsum. Laboriosam unde dolorem molestiae rem fugiat quaerat quae corrupti quibusdam quisquam aspernatur praesentium autem ea, commodi adipisci modi odio corporis, et provident itaque est repudiandae, officiis. Iusto ut, illum voluptatem repudiandae commodi magni dolorem? Beatae harum, sequi aliquid.
+                    .block
+                        h3.title Valores
+                        p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dolor, blanditiis. Labore officia quasi necessitatibus recusandae nobis. Quidem distinctio aut qui ipsum. Laboriosam unde dolorem molestiae rem fugiat quaerat quae corrupti quibusdam quisquam aspernatur praesentium autem ea, commodi adipisci modi odio corporis, et provident itaque est repudiandae, officiis. Iusto ut, illum voluptatem repudiandae commodi magni dolorem? Beatae harum, sequi aliquid.
+                        
+            .container     
+                .testimonies
+                    h3.title O que acham de nós
+                    .blocks
+                        .block
+                            i &ldquo;
+                            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quasi inventore obcaecati, similique nostrum tenetur dolorem ratione aut tempora deleniti ducimus, soluta porro ipsum fugit eum! Quaerat maiores, possimus incidunt dolorum vel
+                            span Jhon Doe
+                        .block
+                            i &ldquo;
+                            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quasi inventore obcaecati, similique nostrum tenetur dolorem ratione aut tempora deleniti ducimus, soluta porro ipsum fugit eum! Quaerat maiores, possimus incidunt dolorum vel
+                            span Jhon Doe
+                        .block
+                            i &ldquo;
+                            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quasi inventore obcaecati, similique nostrum tenetur dolorem ratione aut tempora deleniti ducimus, soluta porro ipsum fugit eum! Quaerat maiores, possimus incidunt dolorum vel
+                            span Jhon Doe
+                        .block
+                            i &ldquo;
+                            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quasi inventore obcaecati, similique nostrum tenetur dolorem ratione aut tempora deleniti ducimus, soluta porro ipsum fugit eum! Quaerat maiores, possimus incidunt dolorum vel
+                            span Jhon Doe
+        +footer
+        
+                        
+        .scroll-top
+            a(href="#")
+                i.fa.fa-chevron-up
+                    
+        script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")
+        script(type="text/javascript" src="assets/scripts/jquery.easing.1.3.js")
+        script(type="text/javascript" src="assets/scripts/jquery.animate-enhanced.min.js")
+        script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js")
+        script(type="text/javascript" src="assets/scripts/scrollIt.min.js")        
+        script(type="text/javascript" src="assets/scripts/jquery.scrollSpeed.js")
+        script(type="text/javascript" src="assets/scripts/owl.carousel.min.js")
+        script(type="text/javascript" src="assets/scripts/functions.js")
