@@ -18,7 +18,8 @@ module.exports = function(grunt){
                     pretty: true
                 },
                 files: {
-                    "../index.html": "pages/index.jade"
+                    "../index.html": "pages/index.jade",
+                    "../empresa.html": "pages/empresa.jade",
                 }
             }
         },

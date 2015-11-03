@@ -1,0 +1,131 @@
+section.business
+    
+    .container
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        flex-direction: row
+        
+        @media( max-width: 960px)
+            flex-direction: column
+        
+        .column
+            width: 33.3%
+            padding: 0 15px
+            
+            @media( max-width: 960px)
+                width: 100% !important
+            
+            figure
+                img
+                    width: 100%
+            
+            h3.title
+                display: inline-block
+                font:
+                    size: 100px
+                    family: Savoye
+                color: $_primary
+                line-height: 40px
+                width: 100%
+                text-align: center
+                padding: 20px 0
+                
+                small
+                    display: inline-block
+                    width: 100%
+                    color: $_primary
+                    font:
+                        size: 46px
+                    line-height: 25px
+                    text-align: right
+                    padding: 0 12px
+            p
+                font:
+                    size: 14px
+                    family: Raleway
+
+                padding: 10px 0
+                text-align: justify
+                
+                
+            ul.list
+                list-style: none
+                width: 100%
+                padding: 0
+                
+                li
+                    
+                    .title
+                        display: flex
+                        align-items: center
+                        justify-content: flex-start
+                        flex-direction: row
+                        width: 100%
+                        
+                        span
+                            font:
+                                size: 38px
+                                family: Savoye
+                            color: $_primary
+                            height: 100%
+                            padding: 10px 0
+                        
+                        strong
+                            padding: 10px 0
+                            font:
+                                size: 16px
+                                family: Rockwell
+                                weight: lighter
+                        
+                    p
+        
+    .testimonies
+
+        h3.title
+            display: block
+            font:
+                size: 100px
+                family: Savoye
+            color: $_primary
+            line-height: 40px
+            width: 100%
+            text-align: center
+            padding: 20px 0
+            margin-bottom: 20px
+            
+        .blocks
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: row
+            padding: 15px 0
+            
+            @media( max-width: 900px)
+                flex-direction: column
+            
+            .block
+                padding: 10px
+                width: 25%
+                
+                i
+                    font:
+                        size: 90px
+                        family: Savoye
+                        style: normal
+                    color: $_primary
+                    line-height: 10px
+                    padding: 0
+                    display: block
+                    
+                
+                p
+                    text-align: justify
+                    font:
+                        size: 12px
+                        weight: 700
+                        
+                span
+                    font:
+                        size: 16px
+                        weight: 700
