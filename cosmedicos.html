@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
-  <body class="home">          
+  <body class="product-page">
+    <div class="productPopup-overlay"></div>
+    <div class="productPopup">
+      <div class="contents"><a class="toggle">X</a><img src="" alt=""></div>
+    </div>
     <div class="logo"></div>
     <div class="slides">
       <ul class="slides-container">
@@ -30,45 +34,50 @@
         <div class="menu-logo"></div>
         <div class="menu-toggle"><i class="fa fa-bars"></i></div>
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="empresa.html">Empresa</a></li>
           <li><a href="masculino.html">Masculino</a></li>
           <li><a href="feminino.html">Feminino</a></li>
-          <li><a href="cosmedicos.html">Cosmédicos</a></li>
+          <li class="active"><a href="cosmedicos.html">Cosmédicos</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
     </header>
-    <section class="about">
+    <section class="feminino">
       <div class="container">
-        <h3 class="title">Sobre Nós</h3><img src="./assets/images/content/about-home.jpg" alt="">
-        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem enim assumenda ex eligendi vitae, maxime id fuga blanditiis. Ipsam eligendi expedita cumque commodi, voluptatem natus eveniet quas porro facere qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, esse temporibus dicta vel dignissimos culpa ad mollitia eligendi illum doloremque explicabo officiis laboriosam, porro dolores quidem id cumque. Ducimus, ab!</p><a class="read-more">Leia Mais</a>
-      </div>
-    </section>
-    <section class="lines">
-      <div class="container">
-        <div class="product-line">
-          <figure><img src="./assets/images/content/product-line-male.jpg" alt="Linha Masculina"></figure>
-          <h3>Masculino</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas explicabo molestias maiores est tempore autem id beatae iste.</p><a href="#">Entre</a>
+        <figure>                       <img src="./assets/images/content/cosmedic.png" alt=""></figure>
+        <div class="products">
+          <div class="product">
+            <figure><img src="./assets/images/content/products/cosmedic-01.jpg" alt="">
+              <div class="overlay"><a class="zoom"><i class="fa fa-search"></i></a></div>
+            </figure>
+          </div>
+          <div class="product">
+            <figure><img src="./assets/images/content/products/cosmedic-02.jpg" alt="">
+              <div class="overlay"><a class="zoom"><i class="fa fa-search"></i></a></div>
+            </figure>
+          </div>
+          <div class="product">
+            <figure><img src="./assets/images/content/products/cosmedic-03.jpg" alt="">
+              <div class="overlay"><a class="zoom"><i class="fa fa-search"></i></a></div>
+            </figure>
+          </div>
+          <div class="product">
+            <figure><img src="./assets/images/content/products/cosmedic-01.jpg" alt="">
+              <div class="overlay"><a class="zoom"><i class="fa fa-search"></i></a></div>
+            </figure>
+          </div>
+          <div class="product">
+            <figure><img src="./assets/images/content/products/cosmedic-02.jpg" alt="">
+              <div class="overlay"><a class="zoom"><i class="fa fa-search"></i></a></div>
+            </figure>
+          </div>
+          <div class="product">
+            <figure><img src="./assets/images/content/products/cosmedic-03.jpg" alt="">
+              <div class="overlay"><a class="zoom"><i class="fa fa-search"></i></a></div>
+            </figure>
+          </div>
         </div>
-        <div class="product-line">
-          <figure><img src="./assets/images/content/product-line-female.jpg" alt="Linha Feminina"></figure>
-          <h3>Feminino</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas explicabo molestias maiores est tempore autem id beatae iste.</p><a href="#">Entre</a>
-        </div>
-        <div class="product-line">
-          <figure><img src="./assets/images/content/product-line-cosmetics.jpg" alt="Linha de Cosméticos"></figure>
-          <h3>Cosméticos</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas explicabo molestias maiores est tempore autem id beatae iste.</p><a href="#">Entre</a>
-        </div>
-      </div>
-      <div class="container"><a class="more">Todos Produtos</a></div>
-    </section>
-    <section class="local">
-      <div class="container">
-        <h3 class="title">Localização</h3>
-        <div id="googleMap" class="map"></div>
       </div>
     </section>
     <footer>

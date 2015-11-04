@@ -1,0 +1,111 @@
+include mixins
+
+doctype html
+html
+    head
+    
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="Painel Administrativo")
+        meta(name="author" content="Hudson Nicoletti")
+    
+        title  Ge' Adore
+        
+        link(rel="stylesheet", href="assets/styles/main.css")
+        link(rel="shortcut icon" href="/favicon.ico")
+    body.product-page       
+    
+        .productPopup-overlay
+        .productPopup
+            .contents
+                a.toggle X
+                img(src="", alt="")
+    
+        .logo
+                
+        .slides
+             ul.slides-container
+                 +slideritem("background-image: url('./assets/images/slider/01.jpg')")
+                 +slideritem("background-image: url('./assets/images/slider/02.jpg')")
+                 
+        header
+            nav
+                .menu-logo
+                .menu-toggle
+                    i.fa.fa-bars
+                ul
+                    li: a(href="index.html") Home
+                    li: a(href="empresa.html") Empresa
+                    li: a(href="masculino.html") Masculino
+                    li.active: a(href="feminino.html") Feminino
+                    li: a(href="cosmedicos.html") Cosmédicos
+                    li: a(href="contato.html") Contato
+                
+        section.feminino
+            .container
+            
+                figure                        
+                    img(src="./assets/images/content/female.png", alt="")
+                    
+                .products
+                
+                    .product
+                        figure
+                            img(src="./assets/images/content/products/female-01.jpg", alt="")
+                            .overlay
+                                a.zoom
+                                    i.fa.fa-search
+                                    
+                    .product
+                        figure
+                            img(src="./assets/images/content/products/female-02.jpg", alt="")
+                            .overlay
+                                a.zoom
+                                    i.fa.fa-search
+                                    
+                    .product
+                        figure
+                            img(src="./assets/images/content/products/female-03.jpg", alt="")
+                            .overlay
+                                a.zoom
+                                    i.fa.fa-search
+                
+                    .product
+                        figure
+                            img(src="./assets/images/content/products/female-01.jpg", alt="")
+                            .overlay
+                                a.zoom
+                                    i.fa.fa-search
+                                    
+                    .product
+                        figure
+                            img(src="./assets/images/content/products/female-02.jpg", alt="")
+                            .overlay
+                                a.zoom
+                                    i.fa.fa-search
+                                    
+                    .product
+                        figure
+                            img(src="./assets/images/content/products/female-03.jpg", alt="")
+                            .overlay
+                                a.zoom
+                                    i.fa.fa-search
+                                    
+                                    
+                a.load Carregar Mais
+                
+        +footer
+        
+                        
+        .scroll-top
+            a(href="#")
+                i.fa.fa-chevron-up
+                    
+        script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")
+        script(type="text/javascript" src="assets/scripts/jquery.easing.1.3.js")
+        script(type="text/javascript" src="assets/scripts/jquery.animate-enhanced.min.js")
+        script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js")
+        script(type="text/javascript" src="assets/scripts/scrollIt.min.js")        
+        script(type="text/javascript" src="assets/scripts/jquery.scrollSpeed.js")
+        script(type="text/javascript" src="assets/scripts/owl.carousel.min.js")
+        script(type="text/javascript" src="assets/scripts/functions.js")

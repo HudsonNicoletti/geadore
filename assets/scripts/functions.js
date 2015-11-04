@@ -14,6 +14,10 @@
             $headerNavLi      = $headerNavUl.find("li"),
             $mobileToggle     = $headerNav.find(".menu-toggle"),
             $scrollBtn        = $(".scroll-top"),
+            $productsWrap     = $(".products"),
+            $product          = $productsWrap.find(".product"),
+            $productPPO       = $body.find(".productPopup-overlay"),
+            $productPP        = $body.find(".productPopup"),
             SliderConfig      = {
                 autoPlay : true,
                 navigation : false,
@@ -128,32 +132,82 @@
             }
         }
         
+        sliderInit();
+        
+        $mobileToggle.on("click", function(){
+            toggleMenu();   
+        });
+
+        $scrollBtn.on("click", function(){
+            $htmlbody.animate({
+                scrollTop : 0
+            },800);
+
+            return false;
+        })
+
+        $window.scroll(function(){
+            var offset = $(window).scrollTop();
+
+            fixedHeader( offset );
+            scrollTopVisibility(offset);
+        });
+        
         
         if( $body.hasClass("home") )
         {
-            
-            sliderInit();
             google.maps.event.addDomListener(window, 'load', googlemaps() );
-            
-            $mobileToggle.on("click", function(){
-                toggleMenu();   
+        }
+        
+        if( $body.hasClass("product-page") )
+        {
+            $product.each(function(){
+                
+                var img = $(this).find("img").attr("src");
+                
+                $(this).find("a.zoom").on("click", function(){
+                    
+                    $productPPO.css({
+                        'display' : 'block'
+                    });
+                    
+                    $productPP.css({
+                        'display' : 'block'
+                    });
+                    
+                    $productPP.find(".contents img").attr("src", img);
+                    
+                });
+                
             });
             
-            $scrollBtn.on("click", function(){
-                $htmlbody.animate({
-                    scrollTop : 0
-                },800);
-
-                return false;
-            })
-            
-            $window.scroll(function(){
-                var offset = $(window).scrollTop();
-
-                fixedHeader( offset );
-                scrollTopVisibility(offset);
+            $productPPO.on("click", function(){
+                
+                    $productPPO.css({
+                        'display' : 'none'
+                    });
+                    
+                    $productPP.css({
+                        'display' : 'none'
+                    });
+                    
+                    $productPP.find(".contents img").attr("src", "");
+                
             });
             
+            $productPP.find("a.toggle").on("click", function(){
+                
+                    $productPPO.css({
+                        'display' : 'none'
+                    });
+                    
+                    $productPP.css({
+                        'display' : 'none'
+                    });
+                    
+                    $productPP.find(".contents img").attr("src", "");
+                
+            });
         }
         
     });
