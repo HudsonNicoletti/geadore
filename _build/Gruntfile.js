@@ -18,8 +18,12 @@ module.exports = function(grunt){
                     pretty: true
                 },
                 files: {
-                    "../index.html": "pages/index.jade",
-                    "../empresa.html": "pages/empresa.jade",
+                    "../index.html":        "pages/index.jade",
+                    "../empresa.html":      "pages/empresa.jade",
+                    "../masculino.html":    "pages/masculino.jade",
+                    "../feminino.html":     "pages/feminino.jade",
+                    "../cosmedicos.html":   "pages/cosmedicos.jade",
+                    "../contato.html":      "pages/contato.jade",
                 }
             }
         },
