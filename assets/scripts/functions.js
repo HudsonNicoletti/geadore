@@ -210,6 +210,11 @@
             });
         }
         
+        if( $body.hasClass("contact") )
+        {
+            google.maps.event.addDomListener(window, 'load', googlemaps() );
+        }
+        
     });
     
 })(jQuery)

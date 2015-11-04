@@ -1,0 +1,90 @@
+include mixins
+
+doctype html
+html
+    head
+    
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="Painel Administrativo")
+        meta(name="author" content="Hudson Nicoletti")
+    
+        title  Ge' Adore
+        
+        link(rel="stylesheet", href="assets/styles/main.css")
+        link(rel="shortcut icon" href="/favicon.ico")
+    body.contact
+    
+        .logo
+                
+        .slides
+             ul.slides-container
+                 +slideritem("background-image: url('./assets/images/slider/01.jpg')")
+                 +slideritem("background-image: url('./assets/images/slider/02.jpg')")
+                 
+        header
+            nav
+                .menu-logo
+                .menu-toggle
+                    i.fa.fa-bars
+                ul
+                    li: a(href="index.html") Home
+                    li: a(href="empresa.html") Empresa
+                    li: a(href="masculino.html") Masculino
+                    li: a(href="feminino.html") Feminino
+                    li: a(href="cosmedicos.html") Cosmédicos
+                    li.active: a(href="contato.html") Contato
+                
+        section.contact
+            .container
+            
+                #googleMap.map
+                
+                form(action="",method="post")
+                
+                    .info
+                        h2.title Endereço
+                        .text
+                            p Rua Imperatriz n. 452 <br> Vila São Francisco <br> Açailândia- MA
+                            
+                            h3 Telefones
+                            span (99) 3538-1187 <br>
+                            span (99) 98809-7071
+                            
+                    .data
+                        h2.title Envie Seu Contato
+                        
+                        .fields
+                            .form-group
+                                label(for="name") Nome Completo
+                                input(type="text", name="name",placeholder="Nome Completo")
+                            
+                            .form-group
+                                label(for="name") E-Mail
+                                input(type="email",name="email",placeholder="E-Mail")
+                            
+                            .form-group
+                                label(for="name") Telefone
+                                input(type="text", name="phone",placeholder="Telefone")
+                            
+                            .form-group
+                                label(for="name") Mensagem
+                                textarea(name="message",placeholder="Mensagem")
+                                
+                        button(type="submit") Enviar
+                
+        +footer
+        
+                        
+        .scroll-top
+            a(href="#")
+                i.fa.fa-chevron-up
+                    
+        script(type="text/javascript" src="assets/scripts/jquery-1.11.3.min.js")
+        script(type="text/javascript" src="assets/scripts/jquery.easing.1.3.js")
+        script(type="text/javascript" src="assets/scripts/jquery.animate-enhanced.min.js")
+        script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js")
+        script(type="text/javascript" src="assets/scripts/scrollIt.min.js")        
+        script(type="text/javascript" src="assets/scripts/jquery.scrollSpeed.js")
+        script(type="text/javascript" src="assets/scripts/owl.carousel.min.js")
+        script(type="text/javascript" src="assets/scripts/functions.js")
