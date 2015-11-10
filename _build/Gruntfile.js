@@ -84,6 +84,14 @@ module.exports = function(grunt){
                 options: {
                   livereload: true,
                 }
+            },
+            images:
+            {
+                files: ['../assets/images/**/*'],
+                tasks: ['imagemin'],
+                options: {
+                    livereload: true,
+                }
             }
         },
         
@@ -97,5 +105,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-rucksack');
     grunt.loadNpmTasks('grunt-postcss');
-    grunt.registerTask('default', ['watch','imagemin'])
+    grunt.registerTask('default', ['watch'])
 }

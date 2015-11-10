@@ -208,6 +208,16 @@
                     $productPP.find(".contents img").attr("src", "");
                 
             });
+            
+            // remove this
+            $("a.load").on("click",function(){
+                
+                $product.eq(((Math.random() * 3 | 0) + 1)).clone().appendTo($productsWrap);
+                $product.eq(((Math.random() * 3 | 0) + 1)).clone().appendTo($productsWrap);
+                $product.eq(((Math.random() * 3 | 0) + 1)).clone().appendTo($productsWrap);
+
+            });
+            
         }
         
         if( $body.hasClass("contact") )
