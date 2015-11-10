@@ -5,6 +5,7 @@ footer
         align-items: center
         justify-content: center
         flex-direction: row
+        width: 100% !important
         
         @media( max-width: 640px )
             flex-direction: column-reverse
@@ -29,15 +30,27 @@ footer
                 padding: 15px 0
             
         .contact
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
             text-align: center
             width: 33.3%
             
             p
                 color: $_primary
+                text-align: left
+                font:
+                    family: Rockwell Light
+                    weight: bold
                 
             span
                 color: $_primary
                 display: inline-block
+                text-align: left
+                font:
+                    family: Rockwell Light
+                    weight: bold
             
         .social
             width: 33.3%          
