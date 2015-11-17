@@ -23,3 +23,11 @@ mixin footer()
                     a(href="#"): i.fa.fa-facebook
                 .icon
                     a(href="#"): i.fa.fa-twitter
+                    
+mixin product(image)
+    .product
+        figure
+            img(src="./assets/images/content/products/#{image}", alt="")
+            .overlay
+                a.zoom
+                    i.fa.fa-search
