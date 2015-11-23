@@ -50,6 +50,14 @@ module.exports = function(grunt){
             }
         },
         
+        uglify: {
+            my_target: {
+                files: {
+                    '../assets/scripts/functions.min.js': ['scripts/functions.js']
+                }
+            }
+        },
+        
         imagemin: {
             dynamic: {                         // Another target 
                 files: [{
@@ -80,7 +88,8 @@ module.exports = function(grunt){
             },
             js:
             {
-                files: ['../assets/scripts/*.js'],
+                files: ['scripts/*.js'],
+                tasks: ['uglify'],
                 options: {
                   livereload: true,
                 }

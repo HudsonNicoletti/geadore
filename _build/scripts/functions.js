@@ -7,7 +7,8 @@
             $html             = $("html"),
             $htmlbody         = $("html, body"),
             $sliderContainer  = $('.slides'),
-            $slider           = $sliderContainer.find("ul"),
+            $slider           = $sliderContainer.find("ul.slides-container"),
+            $sliderThumbnails = $sliderContainer.find("ul.slides-thumbnails"),
             $header           = $("header"),
             $headerNav        = $header.find("nav"),
             $headerNavUl      = $headerNav.find("ul"),
@@ -26,7 +27,19 @@
                 paginationSpeed : 400,
                 singleItem: true,
                 stopOnHover: true,
-                addClassActive: false
+                addClassActive: false,
+                responsiveRefreshRate : 200,
+                afterAction : SyncThumbnail
+            },
+            ThumbnailConfig   = {
+                items: 3,
+                pagination:false,
+                responsiveRefreshRate : 100,
+                beforeInit : setThumbnailParent,
+                responsiveBaseWidth: $sliderThumbnails,
+                afterInit : function(el){
+                    el.find(".owl-item").eq(0).addClass("synced");
+                }
             };
         
         function fixedHeader( offset )
@@ -50,9 +63,26 @@
         
         function sliderInit()
         {
-            var owl = $slider.owlCarousel(SliderConfig);
+            var owl_slider = $slider.owlCarousel(SliderConfig);
+//            var owl_thumb  = $sliderThumbnails.owlCarousel(ThumbnailConfig);
             
-            return owl;
+            return owl_slider;
+        }
+        
+        function setThumbnailParent()
+        {
+            var childs = $sliderThumbnails.find("li");
+            
+        }
+        
+        function SyncThumbnail(el)
+        {
+            var current = this.currentItem;
+            $sliderThumbnails
+              .find(".owl-item")
+              .removeClass("synced")
+              .eq(current)
+              .addClass("synced");
         }
         
         function toggleMenu()
@@ -134,6 +164,12 @@
         
         sliderInit();
         
+        $sliderThumbnails.on("click", ".owl-item", function(e){
+            e.preventDefault();
+            var number = $(this).data("owlItem");
+            $slider.trigger("owl.goTo",number);
+        });
+        
         $mobileToggle.on("click", function(){
             toggleMenu();   
         });
@@ -144,7 +180,7 @@
             },800);
 
             return false;
-        })
+        });
 
         $window.scroll(function(){
             var offset = $(window).scrollTop();
@@ -161,6 +197,7 @@
         
         if( $body.hasClass("product-page") )
         {
+
             $product.each(function(){
                 
                 var img = $(this).find("img").attr("src");
