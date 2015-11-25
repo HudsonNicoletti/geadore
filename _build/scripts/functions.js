@@ -246,12 +246,26 @@
                 
             });
             
-            // remove this
+            $product.each(function(i){
+                
+                if(i > 5)
+                {
+                    $(this).hide();
+                }
+                
+            });
+            
+            
             $("a.load").on("click",function(){
                 
-                $product.eq(((Math.random() * 3 | 0) + 1)).clone().appendTo($productsWrap);
-                $product.eq(((Math.random() * 3 | 0) + 1)).clone().appendTo($productsWrap);
-                $product.eq(((Math.random() * 3 | 0) + 1)).clone().appendTo($productsWrap);
+                $product.filter(":hidden").each(function(i){
+                    
+                    if( i < 6 )
+                    {
+                        $(this).show();
+                    }
+                    
+                });
 
             });
             
