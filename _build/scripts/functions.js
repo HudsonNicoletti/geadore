@@ -26,7 +26,7 @@
                 pagination : false,
                 paginationSpeed : 400,
                 singleItem: true,
-                stopOnHover: true,
+                stopOnHover: false,
                 addClassActive: false,
                 responsiveRefreshRate : 200,
                 afterAction : SyncThumbnail
